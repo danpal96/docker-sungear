@@ -21,4 +21,4 @@ COPY --from=build /app/.pixi/envs /app/.pixi/envs
 COPY --from=build --chmod=0755 /app/entrypoint.sh /app/entrypoint.sh
 
 ENTRYPOINT [ "/app/entrypoint.sh" ]
-CMD [ "python", "-m", "sungear" ]
+CMD [ "python", "-m", "sungear", "--host", "0.0.0.0" ]
